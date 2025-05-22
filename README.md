@@ -37,20 +37,29 @@ The infrastructure includes:
 
 ```
 terraform-aws-infrastructure/
-├── modules/
-│ ├── vpc/
-│ ├── ec2/
-│ ├── rds/
-│ └── s3/
-├── environments/
-│ ├── dev/
-│ └── prod/
-├── backend/
-│ └── backend.tf
-├── main.tf
-├── variables.tf
-├── outputs.tf
-├── README.md
+├── backend-bootstrap/              # Bootstrap module for remote backend
+│   ├── encryption.tf               # Server-side encryption config for S3
+│   ├── main.tf                     # S3 bucket + DynamoDB resource definitions
+│   ├── outputs.tf
+│   ├── provider.tf
+│   ├── README.md
+│   ├── variables.tf
+│   ├── versioning.tf               # Versioning config for S3
+│   └── versions.tf
+├── main/                      # Main infrastructure code
+│   ├── backend.tf             # Configures the remote backend
+│   ├── provider.tf
+│   ├── versions.tf
+│   ├── variables.tf
+│   ├── terraform.tfvars
+│   └── modules/               # Reusable modules
+│       ├── vpc/
+│       ├── ec2/
+│       └── rds/
+├── environments/              # Environment-specific configurations
+│   ├── dev/
+│   └── prod/
+└── README.md
 ```
 
 ---
