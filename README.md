@@ -46,17 +46,17 @@ terraform-aws-infrastructure/
 │   ├── variables.tf
 │   ├── versioning.tf               # Versioning config for S3
 │   └── versions.tf
-├── main/                      # Main infrastructure code
-│   ├── backend.tf             # Configures the remote backend
+├── main/                           # Main infrastructure code
+│   ├── backend.tf                  # Configures the remote backend
 │   ├── provider.tf
 │   ├── versions.tf
 │   ├── variables.tf
 │   ├── terraform.tfvars
-│   └── modules/               # Reusable modules
+│   └── modules/                    # Reusable modules
 │       ├── vpc/
 │       ├── ec2/
 │       └── rds/
-├── environments/              # Environment-specific configurations
+├── environments/                   # Environment-specific configurations
 │   ├── dev/
 │   └── prod/
 └── README.md

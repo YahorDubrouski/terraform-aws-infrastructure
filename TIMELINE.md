@@ -8,24 +8,24 @@ This plan outlines the daily implementation schedule for building and publishing
 
 ### 📅 May 20 – Project Initialization
 
-- [ ] Create root project files: `main.tf`, `variables.tf`, `outputs.tf`, `backend.tf`
-- [ ] Configure AWS provider with region and credentials
-- [ ] Set up remote backend: S3 bucket + DynamoDB table
-- [ ] Define `terraform` block for backend
-- [ ] Run `terraform init` and test backend connection
+- [x] Create root project files: `main.tf`, `variables.tf`, `outputs.tf`, `backend.tf`
+- [x] Configure AWS provider with region and credentials
+- [x] Set up remote backend: S3 bucket + DynamoDB table
+- [x] Define `terraform` block for backend
+- [x] Run `terraform init` and test backend connection
 
 ---
 
 ### 📅 May 21 – VPC and Base Networking
 
-- [ ] Create `modules/vpc/` module
-- [ ] Implement:
+- [x] Create `modules/vpc/` module
+- [x] Implement:
   - VPC resource
   - Public and private subnets
   - Internet gateway and NAT gateway
   - Route tables and associations
-- [ ] Output subnet and VPC IDs
-- [ ] Test `terraform plan` for network module
+- [x] Output subnet and VPC IDs
+- [x] Test `terraform plan` for network module
 
 ---
 
@@ -63,7 +63,7 @@ This plan outlines the daily implementation schedule for building and publishing
 
 ---
 
-### 📅 May 25 – Final Polish and GitHub Publication
+### 📅 May 25 – Finalizing and Documentation
 
 - [ ] Clean up and validate all modules and outputs
 - [ ] Document entire project in `README.md`
