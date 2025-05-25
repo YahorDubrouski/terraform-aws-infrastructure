@@ -42,23 +42,20 @@ This plan outlines the daily implementation schedule for building and publishing
 
 ### 📅 May 23 – Workspaces and Environment Isolation
 
-- [ ] Set up `environments/dev/` and `environments/prod/` folders
-- [ ] Use `terraform workspace` to manage environments
-- [ ] Deploy resources to both workspaces
-- [ ] Confirm state separation and output values
-- [ ] Test idempotency of plans across environments
+- [x] Set up `environments/dev/` and `environments/prod/` folders
+- [x] Deploy resources to both environments
+- [x] Confirm state separation and output values
+- [x] Test idempotency of plans across environments
 
 ---
 
 ### 📅 May 24 – Finalizing and Documentation
 
-- [ ] Clean up and validate all modules and outputs
 - [ ] Document entire project in `README.md`
 - [ ] Include:
   - Setup instructions
   - Architecture description
-  - Screenshot or diagram
+  - Diagram
 - [ ] Push all code to GitHub
-- [ ] (Optional) Run `terraform-docs` to generate module documentation
 
 ---

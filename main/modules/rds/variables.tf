@@ -47,3 +47,13 @@ variable "port" {
   type        = number
   default     = 5432
 }
+
+variable "multi_az" {
+  type    = bool
+  default = false
+}
+
+variable "deletion_protection" {
+  type    = bool
+  default = false
+}
