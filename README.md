@@ -10,6 +10,8 @@ Key components include:
 - Remote backend with S3 and DynamoDB
 - Core AWS services: VPC, EC2, RDS, S3, IAM
 
+![diagram.png](diagram.png)
+
 ---
 
 ## Objectives
@@ -66,15 +68,17 @@ terraform-aws-infrastructure/
 
 ## Usage
 
+### Initialize Terraform with backend
 ```sh
-# Initialize Terraform with backend
 terraform init
+```
 
-# Switch to environment
-terraform workspace new dev
-terraform workspace select dev
+### Environment 
 
-# Deploy infrastructure
+Each environment is deployed from the `main/` directory using env-specific tfvars and backend config.
+
+### Deploy infrastructure
+```
 terraform plan
 terraform apply
 ```
