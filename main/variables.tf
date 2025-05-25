@@ -45,3 +45,32 @@ variable "create_igw" {
   type        = bool
   default     = true
 }
+
+// RDS variables
+variable "name_prefix" {
+  default = "terraform-aws-infrastructure"
+}
+
+variable "rds_instance_type" {
+  default = "db.t3.micro"
+}
+
+variable "rds_storage" {
+  default = 10
+}
+
+variable "rds_username" {
+  sensitive = true
+}
+
+variable "rds_password" {
+  sensitive = true
+}
+
+variable "rds_engine_version" {
+  default = "17.2"
+}
+
+variable "rds_port" {
+  default = 5432
+}

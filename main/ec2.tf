@@ -11,6 +11,7 @@ resource "aws_instance" "nat_test" {
   vpc_security_group_ids      = [aws_security_group.private_ec2.id]
   key_name                    = aws_key_pair.deployer.key_name
   associate_public_ip_address = false
+  iam_instance_profile = module.rds.instance_profile_name
 
   tags = {
     Name = "${var.tag_name_prefix}-nat-test"
@@ -24,6 +25,7 @@ resource "aws_instance" "bastion" {
   vpc_security_group_ids      = [aws_security_group.public_ssh.id]
   associate_public_ip_address = true
   key_name                    = aws_key_pair.deployer.key_name
+  iam_instance_profile = module.rds.instance_profile_name
 
   tags = {
     Name = "${var.tag_name_prefix}-bastion"
