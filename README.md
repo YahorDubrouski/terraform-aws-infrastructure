@@ -56,7 +56,6 @@ terraform-aws-infrastructure/
 │   ├── terraform.tfvars
 │   └── modules/                    # Reusable modules
 │       ├── vpc/
-│       ├── ec2/
 │       └── rds/
 ├── environments/                   # Environment-specific configurations
 │   ├── dev/
